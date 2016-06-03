@@ -1,14 +1,14 @@
 $(document).ready( function(){
 	
 	$("#employees").change( function() {
-		//var val1 = $("#employees").val();
-	    //if(val1!="")
+		var val1 = $("#employees").val();
+	    if(val1!="")
 	    $("#foodType").fadeIn(); 
 	});
 
 	$("#foodType").change( function() {
-		//var val2 = $("#foodType").val();
-	    //if(val2!="")
+		var val2 = $("#foodType").val();
+	    if(val2!="")
 	    $("#havingFood").fadeIn(); 
 	});
     
@@ -20,5 +20,7 @@ $(document).ready( function(){
 		else
 			$(".if_yes").fadeOut();
 	});
+
+
 
 });

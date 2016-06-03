@@ -17,9 +17,13 @@ $todayDate = date('') ;
 
 //echo "Step 4 Done..."  ;
 if($name !=''){
-//Insert Query of SQL
-$query = mysql_query("insert into food_user(name, food_type, having_food, chapati , rice , dal) values ('$name', '$foodType', '$havingFood', '$chapati' , '$rice' , '$dal')");
-echo "<br/><br/><span>Data Inserted successfully...!!</span><br>";
+
+//update database
+$updateQuery= mysql_query("update food_user set food_type='$foodType', having_food='$havingFood',chapati='$chapati' , rice='$rice' , dal='$dal' where name='$name' ");
+
+// //Insert Query of SQL
+// $query = mysql_query("insert into food_user(name, food_type, having_food, chapati , rice , dal) values ('$name', '$foodType', '$havingFood', '$chapati' , '$rice' , '$dal')");
+// echo "<br/><br/><span>Data Inserted successfully...!!</span><br>";
 
 $riceCount = mysql_query("select sum(chapati), sum(rice), sum(dal) from food_user ");
 
@@ -36,4 +40,5 @@ echo "<p>Insertion Failed <br/> Some Fields are Blank....!!</p>";
 
 //error_reporting default value & ~E_NOTICE & ~E_STRICT & ~E_DEPRECATED
 mysql_close($connection); // Closing Connection with Server
+//header('Location: food_details.php');
 ?>
