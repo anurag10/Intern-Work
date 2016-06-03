@@ -1,0 +1,28 @@
+#title {
+width:500px;
+height:70px;
+
+text-shadow:2px 2px 2px #cfcfcf;
+font-size:16px;
+}
+select{
+	height: 40px;
+	width: 200px;
+}
+input{
+}
+label{
+	padding: 20px 0px 20px 0px;
+}
+#form {
+width:70%;
+}
+#foodType{
+display:none;
+}
+#havingFood{
+display:none;
+}
+.if_yes {
+display:none;	
+}
